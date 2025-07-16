@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1><%= title %></h1>
+      <form action="/new" method="post">
+        <label for="messageUser">Name:</label>
+        <input type="text" id="messageUser" name="messageUser" placeholder="Enter name here..." />
+        <label for="messageText">Message:</label>
+        <textarea id="messageText" name="messageText" rows="5" cols="30" placeholder="Enter message here..."></textarea>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

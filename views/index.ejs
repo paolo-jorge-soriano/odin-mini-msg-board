@@ -7,11 +7,20 @@
     <title>Home</title>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <% messages.forEach((message) => { %>
-    <h1><%= message.user %></h1>
-    <h1><%= message.text %></h1>
-    <h1><%= message.added %></h1>
-    <% }); %>
+    <div class="app">
+      <h1 class="title"><%= title %></h1>
+
+      <a href="/new">Add a message</a>
+
+      <div class="message-container">
+        <% messages.forEach((message) => { %>
+        <div class="card">
+          <h3><%= message.user %></h3>
+          <p><%= message.text %></p>
+          <p><%= message.added.toLocaleString() %></p>
+        </div>
+        <% }); %>
+      </div>
+    </div>
   </body>
 </html>
