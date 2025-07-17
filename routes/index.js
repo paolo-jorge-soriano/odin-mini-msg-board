@@ -14,6 +14,7 @@ const messages = [
   },
 ];
 
+// GET - HTML templates
 router.get("/", (req, res) => {
   res.render("index", { title: "Mini Message Board", messages: messages });
 });
@@ -22,6 +23,18 @@ router.get("/new", (req, res) => {
   res.render("form", { title: "Add a message" });
 });
 
+router.get("/message/:id", (req, res) => {
+  const messageId = parseInt(req.params.id);
+  const message = messages[messageId];
+
+  if (message) {
+    res.render("message", { title: "Message Details", message: message, messageId: messageId });
+  } else {
+    res.status(404).send("Error: Message not found.");
+  }
+});
+
+// POST - new message
 router.post("/new", (req, res) => {
   const { messageText, messageUser } = req.body;
   messages.push({ text: messageText, user: messageUser, added: new Date() });
