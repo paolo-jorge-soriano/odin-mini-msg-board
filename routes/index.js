@@ -12,6 +12,16 @@ const messages = [
     user: "Charles",
     added: new Date(),
   },
+  {
+    text: "Looking forward to it!",
+    user: "Denise",
+    added: new Date(),
+  },
+  {
+    text: "How are you?",
+    user: "Bob",
+    added: new Date(),
+  },
 ];
 
 // GET - HTML templates

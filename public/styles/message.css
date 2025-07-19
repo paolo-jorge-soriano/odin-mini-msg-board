@@ -1,0 +1,62 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 20px;
+}
+
+.header,
+.message-details-container {
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.profile-picture {
+  width: 70px;
+}
+
+.message-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+}
+
+.message-author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.message-author h3 {
+  font-size: 2rem;
+}
+
+.btn-home {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.5rem;
+  width: max-content;
+  padding: 15px;
+  border-radius: 50px;
+  background-color: var(--secondary-color);
+  color: white;
+  transition: 0.2s ease-out;
+}
+
+.btn-home:hover {
+  background-color: #0166e1d8;
+}

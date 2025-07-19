@@ -1,0 +1,81 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 20px;
+}
+
+.header,
+.message-container {
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.profile-picture {
+  width: 70px;
+}
+
+.btn-new-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: var(--secondary-color);
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 0 0 20px 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.2s ease-in;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  border-color: #17a9fd;
+}
+
+.left-container {
+  display: flex;
+  gap: 20px;
+}
+
+.message-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message-text h3 {
+  font-size: 1.4rem;
+}
+
+.message-text p {
+  color: gray;
+}

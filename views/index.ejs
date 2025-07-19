@@ -3,25 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/index.css" />
-    <title>Home</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <title><%= title %></title>
   </head>
   <body>
     <div class="app">
-      <h1 class="title"><%= title %></h1>
+      <header class="header">
+        <h1 class="title">Messages</h1>
+        <a href="/new" class="btn-new-msg">+</a>
+      </header>
 
-      <a href="/new">Add a message</a>
+      <main class="message-container">
+        <!-- Display recent message first -->
+        <% for (let i = messages.length - 1; i >= 0; i--) { %>
+        <a href="/message/<%= i %>" class="card-link">
+          <div class="card">
+            <div class="left-container">
+              <img src="/images/profile-icon.png" alt="profile-picture" class="profile-picture" />
+              <div class="message-text">
+                <h3><%= messages[i].user %></h3>
+                <p><%= messages[i].text %></p>
+              </div>
+            </div>
 
-      <div class="message-container">
-        <% messages.forEach((message, index) => { %>
-        <div class="card">
-          <h3><%= message.user %></h3>
-          <p><%= message.text %></p>
-          <p><%= message.added.toLocaleString() %></p>
-          <a href="/message/<%= index %>" class="btn-view-msg">View message</a>
-        </div>
-        <% }); %>
-      </div>
+            <div class="right-container">
+              <p><%= messages[i].added.toLocaleString() %></p>
+            </div>
+          </div>
+        </a>
+        <% } %>
+      </main>
     </div>
   </body>
 </html>
