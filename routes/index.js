@@ -30,7 +30,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/new", (req, res) => {
-  res.render("form", { title: "Add a message" });
+  res.render("form", { title: "Add a Message" });
 });
 
 router.get("/message/:id", (req, res) => {

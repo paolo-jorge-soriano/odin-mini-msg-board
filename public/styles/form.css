@@ -6,7 +6,7 @@
 }
 
 .header,
-.message-details-container {
+.main {
   padding: 30px;
 }
 
@@ -23,41 +23,36 @@
   color: white;
 }
 
-.profile-picture {
-  width: 70px;
+.main {
+  background-color: white;
 }
 
-.message-details-container {
+.form-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: white;
   border-radius: 0 0 20px 20px;
 }
 
-.message-author {
+.form-field {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.3rem;
 }
 
-.message-author h3 {
-  font-size: 2rem;
-}
-
-.message-content,
-.message-date {
-  display: flex;
-  align-items: center;
-  border: 2px solid gray;
+.form-field input,
+.form-field textarea {
+  font-size: 1.2rem;
+  padding: 20px;
+  border: 2px solid lightgray;
   border-radius: 10px;
-  gap: 30px;
-  padding: 10px;
 }
 
-.message-content img,
-.message-date img {
-  width: 30px;
+.form-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn-home {
@@ -74,4 +69,22 @@
 
 .btn-home:hover {
   background-color: #0166e1d8;
+}
+
+.btn-submit {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.3rem;
+  width: max-content;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: #2aab48;
+  color: white;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #2aab48e8;
 }
